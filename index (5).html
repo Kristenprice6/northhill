@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price v. Highline Public Schools — Legal Action | Parents for Transparency</title>
+<meta name="description" content="Kristen Price has filed suit against Highline Public Schools in King County Superior Court over systemic Public Records Act violations. Read the filing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0908;
+    --bg-raised:#131110;
+    --bg-card:#161412;
+    --ink:#ece6dc;
+    --ink-muted:#9c948a;
+    --ink-dim:#726c63;
+    --crimson:#a51c2a;
+    --crimson-bright:#c7303f;
+    --hairline:#2a2724;
+    --hairline-bright:#3a352f;
+    --paper:#f1ead9;
+    --paper-ink:#1c1917;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Spectral',serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 28px;}
+  ::selection{background:var(--crimson);color:var(--paper);}
+
+  /* NAV */
+  nav{border-bottom:1px solid var(--hairline);position:sticky;top:0;background:rgba(10,9,8,0.92);backdrop-filter:blur(6px);z-index:50;}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1040px;}
+  .brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;letter-spacing:0.02em;text-decoration:none;color:var(--ink);}
+  .brand em{color:var(--crimson-bright);font-style:normal;}
+  .navlinks{display:flex;gap:28px;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;}
+  .navlinks a{text-decoration:none;color:var(--ink-muted);border-bottom:1px solid transparent;padding-bottom:3px;transition:color .15s, border-color .15s;}
+  .navlinks a:hover, .navlinks a.current{color:var(--ink);border-color:var(--crimson);}
+  @media (max-width:640px){.navlinks{display:none;}}
+
+  /* HERO */
+  header.hero{max-width:1040px;margin:0 auto;padding:76px 28px 56px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson-bright);display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--crimson-bright);display:inline-block;}
+  h1.title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2.3rem,5.2vw,4rem);line-height:1.06;margin:0 0 22px;max-width:15ch;}
+  h1.title i{font-style:italic;font-weight:500;color:var(--ink-muted);}
+  .dek{font-size:1.15rem;color:var(--ink-muted);max-width:56ch;margin:0 0 34px;}
+
+  .stamp-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .stamp{
+    font-family:'IBM Plex Mono',monospace;font-size:0.78rem;letter-spacing:0.05em;
+    border:1.5px solid var(--crimson);color:var(--crimson-bright);
+    padding:9px 16px;border-radius:2px;transform:rotate(-1.4deg);
+    text-transform:uppercase;white-space:nowrap;
+  }
+  .stamp.solid{background:var(--crimson);color:var(--paper);border-color:var(--crimson);transform:rotate(1deg);}
+
+  /* SECTION SCAFFOLD */
+  section{max-width:1040px;margin:0 auto;padding:64px 28px;border-top:1px solid var(--hairline);}
+  .section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;}
+  .section-num{font-family:'IBM Plex Mono',monospace;color:var(--ink-dim);font-size:0.85rem;}
+  h2{font-family:'Playfair Display',serif;font-weight:600;font-size:1.9rem;margin:0;}
+  .lede{color:var(--ink-muted);max-width:64ch;margin-top:-14px;margin-bottom:36px;font-size:1.02rem;}
+
+  /* CASE SNAPSHOT GRID */
+  .snapshot{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--hairline);border:1px solid var(--hairline);}
+  .snap-cell{background:var(--bg-raised);padding:22px 22px;}
+  .snap-label{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;}
+  .snap-value{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--ink);}
+  .snap-value.crimson{color:var(--crimson-bright);}
+
+  /* PRESS RELEASE */
+  .release{background:var(--bg-card);border:1px solid var(--hairline);padding:38px 40px;position:relative;}
+  .release::before{content:"FOR IMMEDIATE RELEASE";position:absolute;top:-11px;left:34px;background:var(--bg);padding:0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;color:var(--ink-dim);}
+  .release h3{font-family:'Playfair Display',serif;font-size:1.5rem;line-height:1.3;margin:14px 0 18px;}
+  .release .byline{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--ink-dim);margin-bottom:22px;letter-spacing:0.03em;}
+  .release p{margin:0 0 16px;color:var(--ink);}
+  .release blockquote{border-left:2px solid var(--crimson);margin:22px 0;padding:2px 0 2px 20px;font-style:italic;color:var(--ink-muted);}
+
+  /* DOCKET */
+  .docket{border-left:1px solid var(--hairline-bright);margin-left:8px;}
+  .docket-item{position:relative;padding:0 0 34px 30px;}
+  .docket-item:last-child{padding-bottom:4px;}
+  .docket-item::before{content:attr(data-n);position:absolute;left:-9px;top:0;transform:translateX(-100%);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--ink-dim);}
+  .docket-item::after{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.5px solid var(--crimson);}
+  .docket-date{font-family:'IBM Plex Mono',monospace;font-size:0.76rem;color:var(--crimson-bright);letter-spacing:0.04em;margin-bottom:5px;}
+  .docket-title{font-family:'Playfair Display',serif;font-size:1.12rem;margin-bottom:4px;}
+  .docket-note{color:var(--ink-muted);font-size:0.94rem;}
+
+  /* ALLEGATIONS */
+  .allegation{display:grid;grid-template-columns:56px 1fr;gap:18px;margin-bottom:28px;}
+  .allegation .mark{font-family:'IBM Plex Mono',monospace;color:var(--crimson-bright);font-size:0.82rem;padding-top:4px;}
+  .allegation h4{font-family:'Playfair Display',serif;font-weight:600;font-size:1.1rem;margin:0 0 8px;}
+  .allegation p{margin:0;color:var(--ink-muted);}
+
+  /* DOCUMENTS */
+  .doclist{display:flex;flex-direction:column;border-top:1px solid var(--hairline);}
+  .doc-row{display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:center;padding:22px 4px;border-bottom:1px solid var(--hairline);transition:background .15s;}
+  .doc-row:hover{background:var(--bg-raised);}
+  .doc-name{font-family:'Playfair Display',serif;font-size:1.08rem;}
+  .doc-desc{font-family:'Spectral',serif;color:var(--ink-muted);font-size:0.92rem;margin-top:4px;}
+  .doc-meta{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--ink-dim);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;}
+  .doc-dl{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--crimson-bright);text-decoration:none;border:1px solid var(--crimson);padding:8px 14px;white-space:nowrap;transition:background .15s,color .15s;}
+  .doc-dl:hover{background:var(--crimson);color:var(--paper);}
+  @media (max-width:640px){.doc-row{grid-template-columns:1fr;gap:10px;}}
+
+  /* CTA / FOOTER */
+  .cta{background:var(--bg-card);border:1px solid var(--hairline);padding:44px;text-align:center;}
+  .cta h2{margin-bottom:14px;}
+  .cta p{color:var(--ink-muted);max-width:52ch;margin:0 auto 26px;}
+  .btnrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{font-family:'IBM Plex Mono',monospace;font-size:0.76rem;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;padding:14px 26px;border:1px solid var(--crimson);color:var(--crimson-bright);transition:background .15s,color .15s;}
+  .btn.solid{background:var(--crimson);color:var(--paper);}
+  .btn:hover{background:var(--crimson);color:var(--paper);}
+
+  footer{max-width:1040px;margin:0 auto;padding:40px 28px 60px;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  footer a{color:var(--ink-dim);text-decoration:underline;text-underline-offset:3px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="brand">Parents <em>for</em> Transparency</a>
+    <div class="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#demands">Demands</a>
+      <a href="../index.html#timeline">Timeline</a>
+      <a href="index.html" class="current">Legal Action</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Filed July 20, 2026 — King County Superior Court</div>
+  <h1 class="title">Price <i>v.</i> Highline Public Schools</h1>
+  <p class="dek">A lawsuit has been filed against Highline Public Schools alleging a systemic, bad-faith pattern of delay and non-compliance under Washington's Public Records Act. This page hosts the filing in full, for the public record.</p>
+  <div class="stamp-row">
+    <span class="stamp solid">Case No. 26-2-23235-1 SEA</span>
+    <span class="stamp">Dept. 02 — Judge Kristin Ballinger</span>
+    <span class="stamp">Cause: PRA Enforcement, RCW 42.56</span>
+  </div>
+</header>
+
+<section id="snapshot">
+  <div class="section-head"><span class="section-num">01</span><h2>Case Snapshot</h2></div>
+  <div class="snapshot">
+    <div class="snap-cell"><div class="snap-label">Plaintiff</div><div class="snap-value">Kristen Price, Pro Se</div></div>
+    <div class="snap-cell"><div class="snap-label">Defendant</div><div class="snap-value">Highline Public Schools</div></div>
+    <div class="snap-cell"><div class="snap-label">Court</div><div class="snap-value">King County Superior Court</div></div>
+    <div class="snap-cell"><div class="snap-label">Filed</div><div class="snap-value crimson">July 20, 2026</div></div>
+    <div class="snap-cell"><div class="snap-label">Served</div><div class="snap-value">July 21, 2026</div></div>
+    <div class="snap-cell"><div class="snap-label">Trial Date</div><div class="snap-value">July 26, 2027</div></div>
+  </div>
+</section>
+
+<section id="release">
+  <div class="section-head"><span class="section-num">02</span><h2>Press Release</h2></div>
+  <div class="release">
+    <div class="byline">For Immediate Release · July 22, 2026 · Media Contact: Kristen Price · kprice@jurisinsights.com · 206.852.0954</div>
+    <h3>Highline Public Schools Sued Over Alleged Systemic Public Records Act Violations and Unreasonable Delays</h3>
+    <p><strong>SEATTLE, WA</strong> — A formal lawsuit has been filed in King County Superior Court against Highline Public Schools (Case No. 26-2-23235-1 SEA), alleging widespread violations of Washington's Public Records Act (RCW 42.56). The action claims the School District routinely uses arbitrary, multi-month extensions to delay the release of public documents, suppressing transparency around district governance and administrative operations.</p>
+    <p>The complaint, assigned to Department 02 (Judge Kristin Ballinger), highlights a growing pattern where routine requests — including native software tracking logs and basic administrative metadata generated automatically by the District's GovQA portal — are routinely pushed out by 10 to 12 weeks.</p>
+    <p>Under Washington law (RCW 42.56.520), agencies responding to public records requests must provide a reasonable estimate of time based on the actual effort required to process the request. The lawsuit alleges that Highline Public Schools uses boilerplate responses to extend deadlines arbitrarily, depriving parents, advocates, and the community of timely public oversight.</p>
+    <p>Recent documentation demonstrates that even after being served with legal notice, the District issued notices extending basic electronic database reporting to September 29, 2026.</p>
+    <blockquote>"Public oversight of school district governance is impossible when basic transparency requests are intentionally locked behind automated multi-month delays. Washington law requires prompt access to public records, not standardized stalling tactics." — Plaintiff Kristen Price</blockquote>
+    <p>The Plaintiff is seeking court orders compelling immediate production of withheld records, statutory daily penalties under RCW 42.56.550, and court costs.</p>
+  </div>
+</section>
+
+<section id="allegations">
+  <div class="section-head"><span class="section-num">03</span><h2>What the Petition Alleges</h2></div>
+  <p class="lede">Drawn from the filed Petition for Enforcement of the Washington Public Records Act. The full 213-page filing, including all exhibits, is available for download below.</p>
+
+  <div class="allegation">
+    <div class="mark">§ I–II</div>
+    <div><h4>A pattern, not an incident</h4><p>Over a rolling period between May and July 2026, the Petition alleges Plaintiff submitted twenty-four distinct, narrow, keyword-restricted public records requests to the District through its GovQA portal — and that the District met them with a uniform, copy-pasted delay protocol rather than the individualized review the law requires.</p></div>
+  </div>
+  <div class="allegation">
+    <div class="mark">§ IV.B</div>
+    <div><h4>Selective processing</h4><p>The Petition alleges the District processes some requests quickly — closing a ThoughtExchange moderation-log request with a full, unredacted release — but stalls the moment inquiries turn to executive accountability, personnel investigations, or public expenditures.</p></div>
+  </div>
+  <div class="allegation">
+    <div class="mark">§ IV.C</div>
+    <div><h4>Fee demanded, invoice withheld</h4><p>The Petition alleges the District located 114 responsive records and quoted a $1.40 fee, then blocked payment, refused to issue an invoice, and retracted its own production date in favor of an open-ended "just as soon as we are able."</p></div>
+  </div>
+  <div class="allegation">
+    <div class="mark">§ IV.D</div>
+    <div><h4>Generic records in place of a real search</h4><p>The Petition alleges that in response to a request for a specific employee's current desk assignment, the District produced a generic 2023 job template and an onboarding document instead — records the Petition says show the District had material readily available on the very day it claimed it could not.</p></div>
+  </div>
+  <div class="allegation">
+    <div class="mark">§ VI</div>
+    <div><h4>Relief sought</h4><p>The Petition asks the Court to compel immediate production of the withheld records, impose statutory daily penalties under RCW 42.56.550, and award costs.</p></div>
+  </div>
+</section>
+
+<section id="docket">
+  <div class="section-head"><span class="section-num">04</span><h2>Case Schedule</h2></div>
+  <p class="lede">Key dates from the Order Setting Civil Case Schedule, entered by the Presiding Judge on July 20, 2026.</p>
+  <div class="docket">
+    <div class="docket-item" data-n="●"><div class="docket-date">Jul 20, 2026</div><div class="docket-title">Case filed &amp; schedule issued</div><div class="docket-note">Petition filed; case assigned to Judge Kristin Ballinger, Dept. 02.</div></div>
+    <div class="docket-item" data-n="●"><div class="docket-date">Jul 21, 2026</div><div class="docket-title">Defendant served</div><div class="docket-note">Highline Public Schools personally served at its Burien administrative office.</div></div>
+    <div class="docket-item" data-n="●"><div class="docket-date">Feb 22, 2027</div><div class="docket-title">Disclosure of primary witnesses due</div></div>
+    <div class="docket-item" data-n="●"><div class="docket-date">Jun 7, 2027</div><div class="docket-title">Discovery cutoff</div></div>
+    <div class="docket-item" data-n="●"><div class="docket-date">Jun 28, 2027</div><div class="docket-title">ADR conference deadline</div></div>
+    <div class="docket-item" data-n="●"><div class="docket-date">Jul 12, 2027</div><div class="docket-title">Dispositive pretrial motions heard</div></div>
+    <div class="docket-item" data-n="●"><div class="docket-date">Jul 26, 2027</div><div class="docket-title">Trial date</div><div class="docket-note">9:00 a.m., King County Superior Court.</div></div>
+  </div>
+</section>
+
+<section id="documents">
+  <div class="section-head"><span class="section-num">05</span><h2>Filed Documents</h2></div>
+  <p class="lede">Original filings, as submitted to the King County Superior Court Clerk. Provided here for public review.</p>
+  <div class="doclist">
+    <div class="doc-row">
+      <div><div class="doc-name">Press Release</div><div class="doc-desc">Media statement announcing the filing, July 22, 2026.</div></div>
+      <div class="doc-meta">PDF · 1 pg</div>
+      <a class="doc-dl" href="documents/press-release.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <div class="doc-row">
+      <div><div class="doc-name">Petition for Enforcement (Redacted)</div><div class="doc-desc">Full petition with Exhibits A–E, as filed July 20, 2026.</div></div>
+      <div class="doc-meta">PDF · 213 pp</div>
+      <a class="doc-dl" href="documents/petition-filed.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <div class="doc-row">
+      <div><div class="doc-name">Summons</div><div class="doc-desc">Formal notice to Highline Public Schools to respond within 20 days.</div></div>
+      <div class="doc-meta">PDF · 2 pp</div>
+      <a class="doc-dl" href="documents/summons.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <div class="doc-row">
+      <div><div class="doc-name">Case Information Cover Sheet</div><div class="doc-desc">Cause of action and area designation (CICS).</div></div>
+      <div class="doc-meta">PDF · 1 pg</div>
+      <a class="doc-dl" href="documents/case-info-cover-sheet.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <div class="doc-row">
+      <div><div class="doc-name">Order Setting Civil Case Schedule</div><div class="doc-desc">Court-ordered deadlines through trial, entered July 20, 2026.</div></div>
+      <div class="doc-meta">PDF · 6 pp</div>
+      <a class="doc-dl" href="documents/case-schedule-order.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <div class="doc-row">
+      <div><div class="doc-name">Declaration of Service</div><div class="doc-desc">Proof the District was personally served, July 21, 2026.</div></div>
+      <div class="doc-meta">PDF · 1 pg</div>
+      <a class="doc-dl" href="documents/proof-of-service.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="cta">
+    <h2>This is what oversight looks like</h2>
+    <p>A public agency answers to the public it serves. If you've experienced similar delays with Highline Public Schools, or want to follow this case, get in touch.</p>
+    <div class="btnrow">
+      <a class="btn solid" href="../index.html#contact">Contact the Campaign</a>
+      <a class="btn" href="../index.html">Back to Parents for Transparency</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>Parents for Transparency — an independent public accountability campaign.</div>
+  <div>Court filings are public record, King County Superior Court, Case No. 26-2-23235-1 SEA.</div>
+</footer>
+
+</body>
+</html>
